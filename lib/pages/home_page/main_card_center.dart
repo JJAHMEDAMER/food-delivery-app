@@ -13,6 +13,7 @@ class MainCardCenter extends StatefulWidget {
 }
 
 class _MainCardCenterState extends State<MainCardCenter> {
+  PageController showpage = PageController(viewportFraction: 0.85);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -21,6 +22,8 @@ class _MainCardCenterState extends State<MainCardCenter> {
       height: 280,
       color: AppColors.paraColor,
       child: PageView.builder(
+          controller: showpage, // show a part of the next card
+          //note that the space between is from the margin and page view has nothing to do with the spaces
           itemCount: 5,
           itemBuilder: (context, position) {
             return _buildPageItem(position);
@@ -52,8 +55,7 @@ Widget _buildPageItem(int index) {
             borderRadius: BorderRadius.circular(15),
           ),
           height: 120,
-          
-          margin: EdgeInsets.only(left:40, right:40, bottom: 10),
+          margin: EdgeInsets.only(left: 30, right: 30, bottom: 10), // the bottom padding is for the shadow to have space 
           padding: EdgeInsets.all(20),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
