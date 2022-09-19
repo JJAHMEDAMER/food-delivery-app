@@ -11,7 +11,7 @@ class AppText extends StatelessWidget {
   TextOverflow overflow; //
   AppText({
     super.key,
-    this.color = const Color(0xFF332d2b),
+    this.color = const Color(0xFF332d2b), // main black color in colors.dart
     required this.text,
     this.overflow = TextOverflow.ellipsis,
     this.size = 12,
@@ -28,7 +28,7 @@ class AppText extends StatelessWidget {
         color: color,
         fontFamily: 'Roboto',
         fontSize: size,
-        fontWeight: FontWeight.w800,
+        fontWeight: FontWeight.w400,
         height: height, // line height for paragraphs
       ),
     );
@@ -45,7 +45,7 @@ class AppTextSmall extends StatelessWidget {
   AppTextSmall({
     super.key,
     required this.text,
-    this.color = const Color(0xFF332d2b),
+    this.color = const Color(0xFFccc7c5), // text color in file colors.dart
     this.overflow = TextOverflow.ellipsis,
     this.size = 8,
     this.height = 1.2,
