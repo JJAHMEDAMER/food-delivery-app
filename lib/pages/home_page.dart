@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/util/colors.dart';
+import 'package:food_delivery_app/widgets/app_text.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,6 +12,41 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Column(
+        children: [
+          Container(
+            margin: EdgeInsets.only(top: 15, bottom: 15),
+            padding: EdgeInsets.only(left: 15, right: 15),
+            child: Row(
+              //crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    AppText(text: 'Egypt', size: 20, color: AppColors.mainColor,),
+                    AppTextSmall(text: 'Cairo', size: 12,)
+                  ],
+                ),
+                Container(
+                  width: 45,
+                  height: 45,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: AppColors.mainColor,
+                  ),
+                  child: Icon(
+                    Icons.search,
+                    color: Colors.white, 
+                  ),
+                )
+              ],
+            ),
+          ),
+
+        ],
+      ),
+    );
   }
 }
