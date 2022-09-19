@@ -65,9 +65,12 @@ Widget _buildPageItem(int index) {
                 size: 20,
                 color: AppColors.mainBlackColor,
               ),
+              SizedBox(height: 10,),
               Row(
                 children: [
-                  Icon(Icons.star),
+                  Wrap(
+                    children: List.generate(5, (index) => Icon(Icons.star, color: AppColors.mainColor, size: 15,))
+                  ),
                   AppTextSmall(text: '4.5'),
                   AppTextSmall(text: '1287 comments'),
                 ],
