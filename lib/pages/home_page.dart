@@ -26,7 +26,12 @@ class _HomePageState extends State<HomePage> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     AppText(text: 'Egypt', size: 20, color: AppColors.mainColor,),
-                    AppTextSmall(text: 'Cairo', size: 12,)
+                    Row(
+                      children: [
+                        AppTextSmall(text: 'Cairo', size: 12,),
+                      Icon(Icons.arrow_drop_down_rounded)
+                      ],
+                    )
                   ],
                 ),
                 Container(
@@ -38,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   child: Icon(
                     Icons.search,
-                    color: Colors.white, 
+                    color: Colors.white,
                   ),
                 )
               ],
