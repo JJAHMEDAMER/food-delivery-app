@@ -5,6 +5,7 @@ class AppColors {
   //AppColors.MyColor
   static final Color textColor = const Color(0xFFccc7c5);
   static final Color mainColor = const Color(0xFF89dad0);
+  static final Color mainColorDarker = Color.fromARGB(255, 114, 178, 171);
   // static final Color mainColor = const Color ( 0xFFfa7552 ) ;
   static final Color iconcolor1 = const Color(0xFFffd28d);
   static final Color iconColor2 = const Color(0xFFfcab88);
@@ -15,4 +16,5 @@ class AppColors {
   static final Color mainBlackColor = const Color(0xFF332d2b);
   // static final Color yellowColor = const Color ( 0xFFfa7552 ) ;
   static final Color vellowColor = const Color(0xFFffd372);
+  static final Color shadow = const Color(0xFFe8e8e8);
 }
