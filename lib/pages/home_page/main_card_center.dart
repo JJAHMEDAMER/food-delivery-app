@@ -38,7 +38,6 @@ class _MainCardCenterState extends State<MainCardCenter> {
           // page builder is for the scrolling
           // stack widget allows for elements to be on top of each other
           height: 280,
-          color: AppColors.mainColor,
           child: PageView.builder(
               controller: pageController, // show a part of the next card
               //note that the space between is from the margin and page view has nothing to do with the spaces
@@ -51,6 +50,7 @@ class _MainCardCenterState extends State<MainCardCenter> {
           dotsCount: 5,
           position: _currentPageValue,
           decorator: DotsDecorator(
+            activeColor: AppColors.mainColor,
             size: const Size.square(9.0),
             activeSize: const Size(18.0, 9.0),
             activeShape: RoundedRectangleBorder(
