@@ -4,6 +4,8 @@ import 'package:food_delivery_app/util/colors.dart';
 import 'package:food_delivery_app/util/dimensions.dart';
 import 'package:food_delivery_app/widgets/app_text.dart';
 
+import 'card_list.dart';
+
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -59,6 +61,8 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
           MainCardCenter(),
+          SizedBox(height: Dimensions.height30),
+          CardList()
         ],
       ),
     );
