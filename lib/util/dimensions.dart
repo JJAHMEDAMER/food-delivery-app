@@ -50,6 +50,9 @@ class Dimensions{
 
   //static double listImage = screewidth/3.25;
   //static double listText = screewidth/3.9;
+
+  //Food Page
+  static double foodPageImgSize = screenHeight/2.41;
  
 
 }
