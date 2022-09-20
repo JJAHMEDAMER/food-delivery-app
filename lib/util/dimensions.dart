@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
 
 // Get Package is used for routing but can access the screen Dimensions
-class Dimensions{
+class scrollable{
   static double screenHeight = Get.context!.height;
   static double screewidth = Get.context!.width;
+  // iphone 12 height = 844, width = 399
 
   //Box Size For Sized Box
   static double height10 = screenHeight/84.4;
@@ -41,6 +42,14 @@ class Dimensions{
   static double mainCardCentersize = screenHeight/3.84;
   static double mainCardTextsize = screenHeight/7.03;
 
+  // Card List
+  // Use width because the width has less variation between phones
+  // And since the list is scrollable the height isn't an issue the user can always scroll
+  static double listImage = screenHeight/7.67;
+  static double listText = screenHeight/9.37;
 
+  //static double listImage = screewidth/3.25;
+  //static double listText = screewidth/3.9;
+ 
 
 }
