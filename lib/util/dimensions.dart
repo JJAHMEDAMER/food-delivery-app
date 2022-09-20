@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 
 // Get Package is used for routing but can access the screen Dimensions
-class scrollable{
+class Dimensions{
   static double screenHeight = Get.context!.height;
   static double screewidth = Get.context!.width;
   // iphone 12 height = 844, width = 399
