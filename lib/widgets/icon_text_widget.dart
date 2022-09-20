@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:food_delivery_app/util/colors.dart';
+import 'package:food_delivery_app/util/dimensions.dart';
 
 import 'app_text.dart';
 
@@ -30,9 +31,9 @@ class IconTextWidget extends StatelessWidget {
               Icon(
                 Icons.circle,
                 color: AppColors.iconcolor1,
-                size: 20,
+                size: Dimensions.icon24,
               ),
-              SizedBox(width: 2),
+              SizedBox(width: 5),
               AppTextSmall(text: text),
             ],
           ),
@@ -43,9 +44,9 @@ class IconTextWidget extends StatelessWidget {
               Icon(
                 Icons.location_on,
                 color: AppColors.mainColor,
-                size: 20,
+                size: Dimensions.icon24,
               ),
-              SizedBox(width: 2),
+              SizedBox(width: 5),
               AppTextSmall(text: distance),
             ],
           ),
@@ -56,9 +57,9 @@ class IconTextWidget extends StatelessWidget {
               Icon(
                 Icons.access_time_filled_rounded,
                 color: AppColors.iconColor2,
-                size: 20,
+                size: Dimensions.icon24,
               ),
-              SizedBox(width: 2),
+              SizedBox(width: 5),
               AppTextSmall(text: time),
             ],
           ),

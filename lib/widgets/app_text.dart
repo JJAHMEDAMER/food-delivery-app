@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:food_delivery_app/util/dimensions.dart';
 
 class AppText extends StatelessWidget {
   // Declaring Variables
@@ -14,7 +15,7 @@ class AppText extends StatelessWidget {
     this.color = const Color(0xFF332d2b), // main black color in colors.dart
     required this.text,
     this.overflow = TextOverflow.ellipsis,
-    this.size = 12,
+    this.size = 0,
     this.height = 1.2,
   });
 
@@ -27,7 +28,7 @@ class AppText extends StatelessWidget {
       style: TextStyle(
         color: color,
         fontFamily: 'Roboto',
-        fontSize: size,
+        fontSize: size==0?Dimensions.font20:size,
         fontWeight: FontWeight.w400,
         height: height, // line height for paragraphs
       ),
@@ -47,7 +48,7 @@ class AppTextSmall extends StatelessWidget {
     required this.text,
     this.color = const Color(0xFFccc7c5), // text color in file colors.dart
     this.overflow = TextOverflow.ellipsis,
-    this.size = 8,
+    this.size = 0,
     this.height = 1.2,
   });
 
@@ -58,7 +59,7 @@ class AppTextSmall extends StatelessWidget {
       style: TextStyle(
         color: color,
         fontFamily: 'Roboto',
-        fontSize: size,
+        fontSize: size==0?Dimensions.font12:size,
         fontWeight: FontWeight.w400,
         height: height, // line height for paragraphs
       ),
