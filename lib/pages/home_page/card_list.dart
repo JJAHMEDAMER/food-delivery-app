@@ -32,6 +32,8 @@ class _CardListState extends State<CardList> {
             height: 700,
             // List View Builder Parent show have a given height
             child: ListView.builder(
+              //Disable Scroll for the list
+              physics: NeverScrollableScrollPhysics(),
               itemCount: 10,
               itemBuilder: (context, index) {
                 return Container(

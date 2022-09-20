@@ -20,8 +20,10 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         children: [
           Container(
-            margin: EdgeInsets.only(top: Dimensions.height15, bottom: Dimensions.height15),
-            padding: EdgeInsets.only(left: Dimensions.width15, right: Dimensions.width15),
+            margin: EdgeInsets.only(
+                top: Dimensions.height15, bottom: Dimensions.height15),
+            padding: EdgeInsets.only(
+                left: Dimensions.width15, right: Dimensions.width15),
             child: Row(
               //crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -37,7 +39,6 @@ class _HomePageState extends State<HomePage> {
                       children: [
                         AppTextSmall(
                           text: 'Cairo',
-                          
                         ),
                         Icon(Icons.arrow_drop_down_rounded)
                       ],
@@ -60,9 +61,16 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          MainCardCenter(),
-          SizedBox(height: Dimensions.height30),
-          CardList()
+          Expanded(
+              child: SingleChildScrollView(
+            child: Column(
+              children: [
+                MainCardCenter(),
+                SizedBox(height: Dimensions.height30),
+                CardList()
+              ],
+            ),
+          ))
         ],
       ),
     );
