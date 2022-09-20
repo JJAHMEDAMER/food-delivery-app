@@ -17,6 +17,19 @@ class MainCardCenter extends StatefulWidget {
 class _MainCardCenterState extends State<MainCardCenter> {
   PageController pageController = PageController(viewportFraction: 0.85);
 
+  var _currentPageValue = 0.0;
+
+  @override
+  void initState(){
+    super.initState();
+    pageController.addListener((){
+      setState(() {
+        _currentPageValue = pageController.page!;
+      });
+    });
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -36,7 +49,7 @@ class _MainCardCenterState extends State<MainCardCenter> {
         ),
         new DotsIndicator(
           dotsCount: 5,
-          position: 0,
+          position: _currentPageValue,
           decorator: DotsDecorator(
             size: const Size.square(9.0),
             activeSize: const Size(18.0, 9.0),
