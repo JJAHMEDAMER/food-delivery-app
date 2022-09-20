@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_delivery_app/pages/home_page/main_card_center.dart';
 import 'package:food_delivery_app/util/colors.dart';
 import 'package:food_delivery_app/widgets/app_text.dart';
 
@@ -25,11 +26,18 @@ class _HomePageState extends State<HomePage> {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AppText(text: 'Egypt', size: 20, color: AppColors.mainColor,),
+                    AppText(
+                      text: 'Egypt',
+                      size: 20,
+                      color: AppColors.mainColor,
+                    ),
                     Row(
                       children: [
-                        AppTextSmall(text: 'Cairo', size: 12,),
-                      Icon(Icons.arrow_drop_down_rounded)
+                        AppTextSmall(
+                          text: 'Cairo',
+                          size: 12,
+                        ),
+                        Icon(Icons.arrow_drop_down_rounded)
                       ],
                     )
                   ],
@@ -49,7 +57,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-
+          MainCardCenter(),
         ],
       ),
     );
