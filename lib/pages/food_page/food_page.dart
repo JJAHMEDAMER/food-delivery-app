@@ -19,6 +19,7 @@ class _FoodPageState extends State<FoodPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
           Positioned(
@@ -89,7 +90,69 @@ class _FoodPageState extends State<FoodPage> {
                 ],
               ),
             ),
-          )
+          ),
+          Positioned(
+            left: 0,
+            right: 0,
+            bottom: 0,
+              child: Container(
+            padding: EdgeInsets.all(Dimensions.height30),
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(Dimensions.rad40),
+                    topRight: Radius.circular(Dimensions.rad40)),
+                color: AppColors.buttonBackaroundcolor),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  padding: EdgeInsets.only(
+                    left: Dimensions.height15,
+                    right: Dimensions.height15,
+                    top: Dimensions.height20,
+                    bottom: Dimensions.height20,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(Dimensions.rad20),
+                    color: Colors.white,
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.remove,
+                        color: AppColors.textColor,
+                        size: Dimensions.icon24,
+                      ),
+                      SizedBox(width: Dimensions.width15),
+                      AppText(text: '0'),
+                      SizedBox(width: Dimensions.width15),
+                      Icon(
+                        Icons.add,
+                        color: AppColors.textColor,
+                        size: Dimensions.icon24,
+                      ),
+                    ],
+                  ),
+                ),
+                Container(
+                  padding: EdgeInsets.only(
+                    left: Dimensions.height15,
+                    right: Dimensions.height15,
+                    top: Dimensions.height20,
+                    bottom: Dimensions.height20,
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(Dimensions.rad20),
+                    color: AppColors.mainColor,
+                  ),
+                  child: AppText(
+                    text: '\$0.08 Add to cart',
+                    color: Colors.white70,
+                  ),
+                ),
+              ],
+            ),
+          ))
         ],
       ),
     );

@@ -32,6 +32,7 @@ class Dimensions {
   static double rad15 = screenHeight / 56.27;
   static double rad20 = screenHeight / 42.2;
   static double rad30 = screenHeight / 28.13;
+  static double rad40 = screenHeight / 21.1;
 
   // Icon Size
   static double icon15 = screenHeight / 56.27; // The default icon size is 24
