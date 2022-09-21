@@ -159,7 +159,7 @@ class _FoodPageState extends State<FoodPage> {
                       ),
                       child: AppText(
                         text: '\$0.08 Add to cart',
-                        color: Colors.white70,
+                        color: Colors.white,
                       ),
                     ),
                   ],
