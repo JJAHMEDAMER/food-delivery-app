@@ -23,7 +23,8 @@ class BackCartIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: Dimensions.height30),
+      // Avoid Alignment and padding in custom widgets
+      //padding: EdgeInsets.only(top: Dimensions.height30, bottom: Dimensions.height10), 
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
