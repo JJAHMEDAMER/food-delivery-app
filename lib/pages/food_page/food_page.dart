@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:food_delivery_app/util/colors.dart';
 import 'package:food_delivery_app/util/dimensions.dart';
 import 'package:food_delivery_app/widgets/app_text.dart';
+import 'package:food_delivery_app/widgets/back_cart_icons.dart';
 import 'package:food_delivery_app/widgets/icon_text_widget.dart';
 
 class FoodPage extends StatefulWidget {
@@ -31,6 +32,14 @@ class _FoodPageState extends State<FoodPage> {
                   fit: BoxFit.cover,
                 ),
               ),
+            ),
+          ),
+          Positioned(
+            left: Dimensions.width20,
+            right: Dimensions.width20,
+            child: BackCartIcon(
+              iconLeft: Icons.arrow_back_ios_new_outlined,
+              iconRight: Icons.shopping_cart_outlined,
             ),
           ),
         ],

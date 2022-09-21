@@ -17,4 +17,9 @@ class AppColors {
   // static final Color yellowColor = const Color ( 0xFFfa7552 ) ;
   static final Color vellowColor = const Color(0xFFffd372);
   static final Color shadow = const Color(0xFFe8e8e8);
+
+  // Colors For Top Icon Bar
+  static final Color iconColorBg = const Color(0xFFfcf4e4);
+  static final Color iconColor = const Color(0xFF756d54);
 }
+
