@@ -6,6 +6,7 @@ import 'package:food_delivery_app/util/dimensions.dart';
 import 'package:food_delivery_app/widgets/app_text.dart';
 import 'package:food_delivery_app/widgets/back_cart_icons.dart';
 import 'package:food_delivery_app/widgets/icon_text_widget.dart';
+import 'package:food_delivery_app/widgets/review_row.dart';
 
 class FoodPage extends StatefulWidget {
   const FoodPage({super.key});
@@ -42,6 +43,53 @@ class _FoodPageState extends State<FoodPage> {
               iconRight: Icons.shopping_cart_outlined,
             ),
           ),
+          Positioned(
+            bottom: 0,
+            left: 0,
+            right: 0,
+            child: Container(
+              height: 420,
+              padding: EdgeInsets.only(
+                  left: Dimensions.width15,
+                  right: Dimensions.width15,
+                  top: Dimensions.height30),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(Dimensions.rad30),
+                  topRight: Radius.circular(Dimensions.rad30),
+                ),
+                color: Colors.white,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  // 1st Row
+                  AppText(
+                    text: 'Biriani',
+                    size: Dimensions.font30,
+                  ),
+
+                  SizedBox(height: Dimensions.height20),
+                  // 2nd Row
+                  reviewRow(startNumber: '4.5', commentNumber: 1287),
+                  SizedBox(height: Dimensions.height20),
+
+                  //3rd Row
+                  IconTextWidget(
+                      text: 'Normal', distance: '17Km', time: '32min'),
+                  SizedBox(height: Dimensions.height30),
+
+                  // 4th Row
+                  AppText(
+                    text: 'Introduce',
+                    size: Dimensions.font26,
+                  ),
+                  SizedBox(height: Dimensions.height20),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
