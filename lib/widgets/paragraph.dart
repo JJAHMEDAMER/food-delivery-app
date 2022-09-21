@@ -64,7 +64,7 @@ class _ParagraphState extends State<Paragraph> {
                       : (displayedText + expandedText),
                   size: Dimensions.font16,
                   color: AppColors.paraColor,
-                  height: 1.3,
+                  height: 1.6,
                 ),
                 InkWell(
                     onTap: () {
